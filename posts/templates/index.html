@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    {% load static %}
+                <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
+                <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <body>
+        
+        <!-- header section starts  -->
+        
+        <header class="header">
+        
+            <a href="#" class="logo"><span>J</span>ac</a>
+        
+            <nav class="navbar">
+                <a href="#banner">banner</a>
+                <a href="#posts">my posts</a>
+                <a href="#contact">contact me</a>
+            </nav>
+        
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+        
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        
+        </header>
+        
+        <!-- header section ends -->
+        
+        <!-- banner section starts  -->
+        
+        <section class="banner" id="banner">
+        
+            <div class="content">
+                <h3>Explore the nature</h3>
+                <p>Act of observing, experiencing, and studying the natural world around us.</p>
+                <a href="#" class="btn">jac's blogs</a>
+            </div>
+        
+        </section>
+        
+        <!-- banner section ends -->
+        
+        <!-- posts section starts  -->
+        
+        <section class="container" id="posts">
+        
+            <div class="posts-container">
+        
+                <div class="post">
+                    {% for Post in posts reversed%}
+                    <div style="
+                        background:#f2efef;
+                        border:var(--border);
+                        border-radius: .5rem;
+                        margin-bottom: 1.5rem;
+                    " class="row">
+                            <div class="card">
+                                <a style="text-decoration: none; color: black;" href="/Post/{{Post.id}}">
+                                    <img src="{{Post.image}}" alt="images" class="image">
+                                    <h1 style="font-size: x-large; font: bold;">{{Post.title}}</h1>
+                                    <h3 style="font-size: small;">{{Post.created_at}}</h3>
+                                    <p style="font-size: large;">{{Post.body| truncatewords:20}}</p>
+                                </a>
+                            </div>
+                            <a href="#" class="user">
+                                <i class="far fa-user"></i>
+                                <span>by Jac</span>
+                            </a>
+                            <!-- {% if liked %}
+                                <p>You liked this post!</p>
+                            {% else %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ like_form }}
+                                    <button type="submit" name="like">Like</button>
+                                </form>
+                            {% endif %}
+
+                            {% for comment in comments %}
+                                <p>{{ comment.content }}</p>
+                                <small>by {{ comment.user }} at {{ comment.created_at }}</small>
+                            {% endfor %}
+
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ comment_form }}
+                                <button type="submit">Comment</button>
+                            </form> -->
+                            <a href="#" class="icon">
+                                <i class="far fa-comment"></i>
+                                <span>(45)</span>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="far fa-share-square"></i>
+                                <span>(29)</span>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="sidebar">
+        
+                <div class="box">
+                    <h3 class="title">about me</h3>
+                    <div class="about">
+                        <img src="{% static 'images/user.jpg' %}" alt="">
+                        <h3>jac</h3>
+                        <p>Experienced software developer with a passion for developing innovative and user-friendly software solutions.</p>
+                        <div class="follow">
+                            <a href="https://www.facebook.com/jackson.ndege.374/" target="_blank" class="fab fa-facebook-f"></a>
+                            <a href="https://twitter.com/Ndegejack12" target="_blank" class="fab fa-twitter"></a>
+                            <a href="https://instagram.com/ndege376?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank" class="fab fa-instagram"></a>
+                            <a href="https://www.linkedin.com/in/jackson-ndege-70b15a21b/" target="_blank" class="fab fa-linkedin"></a>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="title">categories</h3>
+                    <div class="category">
+                        <a href="#"> travel <span>42</span></a>
+                        <a href="#"> photography <span>75</span> </a>
+                        <a href="#"> technology <span>22</span> </a>
+                        <a href="#"> fashion <span>17</span> </a>
+                        <a href="#"> study <span>48</span> </a>
+                        <a href="#"> science <span>39</span> </a>
+                        <a href="#"> music <span>59</span> </a>
+                        <a href="#"> public <span>12</span> </a>
+                        <a href="#"> business <span>32</span> </a>
+                        <a href="#"> sports <span>18</span> </a>
+                    </div>
+                </div>
+        
+                <div class="box">
+                    <h3 class="title">popular posts</h3>
+                    <div class="p-post">
+                        <div class="post">
+                            {% for Post in posts reversed%}
+                            <div class="row">
+                                    <div class="card">
+                                        <a style="text-decoration: none; color: black;" href="/Post/{{Post.id}}">
+                                            <h1 >{{Post.title}}</h1>
+                                            <h3 >{{Post.created_at}}</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                    </div>
+                </div>
+        
+                <div class="box">
+                    <h3 class="title">popular tags</h3>
+                    <div class="tags">
+                        <a href="#">travel</a>
+                        <a href="#">photo</a>
+                        <a href="#">science</a>
+                        <a href="#">biology</a>
+                        <a href="#">aliens</a>
+                        <a href="#">nature</a>
+                        <a href="#">mountain</a>
+                        <a href="#">river</a>
+                        <a href="#">camp</a>
+                        <a href="#">landscape</a>
+                        <a href="#">world</a>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </section>
+        
+        <!-- posts section ends -->
+        
+        <!-- contact section starts  -->
+        
+        <section class="contact" id="contact">
+        
+            <form action="">
+                <h3>contact me</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="subject">
+                </div>
+                <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+        
+        </section>
+        
+        <!-- contact section ends -->
+        
+        <!-- footer section starts  -->
+        
+        <section class="footer">
+        
+            <div class="follow">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        
+            <div class="credit">created by <span>mr. jac</span> | all rights reserved</div>
+        
+        </section>
+        
+        <!-- footer section ends -->
+        
+        <!-- custom js file link  -->
+        <script src="{% static 'js/script.js' %}"></script>
+            
+        </body>
+        </html>
+
+        <!-- Add more blog posts here -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Jac's Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
