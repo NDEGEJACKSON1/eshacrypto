@@ -1,19 +1,18 @@
 from django.db import models
 from datetime import datetime
+from abstract.models import AbstractModel, AbstractManager
+from ckeditor.fields import RichTextField
+
+class PostManager(AbstractManager):
+    pass
 
 # Create your models here.
 
-class Post(models.Model):
+class Post(AbstractModel):
     image = models.ImageField(upload_to='jacsblog/uploaded')
-    title = models.CharField(max_length=100)
-    body = models.CharField(max_length=10000000)
+    title = RichTextField()
+    body =  RichTextField()
     created_at = models.DateTimeField(default = datetime.now, blank=True)
 
-# class Like(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-#     created_at = models.DateTimeField(auto_now_add=True)
-
-# class Comment(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-#     content = models.TextField()
-#     created_at = models.DateTimeField(auto_now_add=True)
+    objects = PostManager()
+    

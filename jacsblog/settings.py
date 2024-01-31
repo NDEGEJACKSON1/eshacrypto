@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
+    'ckeditor',
+    
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILE_DIRS = [BASE_DIR / 'static']
+
+BOOTSTRAP4 = {
+    'include_jquery': True,  # Include jQuery with Bootstrap
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS':
+    'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 15,
+}

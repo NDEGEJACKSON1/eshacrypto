@@ -1,250 +1,413 @@
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    {% load static %}
-                <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
-                <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>eshacrypto</title>
+    <!-- {% load static %} -->
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet"
+        href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
 
 </head>
-<body>
-    <header>
 
-    </header>
+<body>
 
     <main>
-        <body>
-        
+
+
         <!-- header section starts  -->
-        
+
         <header class="header">
-        
-            <a href="#" class="logo"><span>J</span>ac</a>
-        
+
+            <a href="#" class="logo"><span>e</span>shacrypto</a>
+
             <nav class="navbar">
-                <a href="#banner">banner</a>
-                <a href="#posts">my posts</a>
-                <a href="#contact">contact me</a>
+                <a href="#banner">Home</a>   
+                <a href="#AboutUs">About us</a>                                                 
+                <a href="#posts">new posts</a>  
+                <a href="#contact">contact us</a>
             </nav>
-        
+
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
             </div>
-        
+
             <form action="" class="search-form">
                 <input type="search" name="" placeholder="search here..." id="search-box">
                 <label for="search-box" class="fas fa-search"></label>
             </form>
-        
+
         </header>
-        
+
         <!-- header section ends -->
-        
-        <!-- banner section starts  -->
-        
-        <section class="banner" id="banner">
-        
-            <div class="content">
-                <h3>Explore the nature</h3>
-                <p>Act of observing, experiencing, and studying the natural world around us.</p>
-                <a href="#" class="btn">jac's blogs</a>
-            </div>
-        
-        </section>
-        
-        <!-- banner section ends -->
-        
-        <!-- posts section starts  -->
-        
-        <section class="container" id="posts">
-        
-            <div class="posts-container">
-        
-                <div class="post">
-                    {% for Post in posts reversed%}
-                    <div style="
-                        background:#f2efef;
-                        border:var(--border);
-                        border-radius: .5rem;
-                        margin-bottom: 1.5rem;
-                    " class="row">
-                            <div class="card">
-                                <a style="text-decoration: none; color: black;" href="/Post/{{Post.id}}">
-                                    <img src="{{Post.image}}" alt="images" class="image">
-                                    <h1 style="font-size: x-large; font: bold;">{{Post.title}}</h1>
-                                    <h3 style="font-size: small;">{{Post.created_at}}</h3>
-                                    <p style="font-size: large;">{{Post.body| truncatewords:20}}</p>
-                                </a>
+
+            <!-- banner section starts  -->
+
+            <section class="banner" id="banner">
+
+                <div class="content">
+                    <h3>Explore the nature</h3>
+                    <p>Act of observing, experiencing, and studying the natural world around us.</p>
+                    <a href="#" class="btn">eshacrypto</a>
+                </div>
+
+            </section>
+
+            <!-- banner section ends -->
+
+            <section class="container_fluid">
+                <div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                            <h1 style="font-size: 60px; margin-top: 38px;" class="CoverUp title">Top up your <span style="color: #7F56D9">skills</span> <br /> of <span
+                                    style="color: #7F56D9">Trading</span> and become a<br /> <span
+                                    style="color: #7F56D9">Good Trader</span> in both digital currencies and Financial Trading</h1>
+                            <p style="font-size: medium;" class="smt">Provides you with the latest cryptocurrency material that helps your
+                                knowledge grow.</p>
+                            <div class="upBtn">
+                                <a href="/dashboard" class="btn btn-primary"> Get started</a>
+                                <a href="#" class="btn btn-secondary">See Videos</a>
                             </div>
-                            <a href="#" class="user">
-                                <i class="far fa-user"></i>
-                                <span>by Jac</span>
-                            </a>
-                            <!-- {% if liked %}
-                                <p>You liked this post!</p>
-                            {% else %}
-                                <form method="post">
-                                    {% csrf_token %}
-                                    {{ like_form }}
-                                    <button type="submit" name="like">Like</button>
-                                </form>
-                            {% endif %}
-
-                            {% for comment in comments %}
-                                <p>{{ comment.content }}</p>
-                                <small>by {{ comment.user }} at {{ comment.created_at }}</small>
-                            {% endfor %}
-
-                            <form method="post">
-                                {% csrf_token %}
-                                {{ comment_form }}
-                                <button type="submit">Comment</button>
-                            </form> -->
-                            <a href="#" class="icon">
-                                <i class="far fa-comment"></i>
-                                <span>(45)</span>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="far fa-share-square"></i>
-                                <span>(29)</span>
-                            </a>
+                            <div style="font-size: small;" class="row">
+                                <div class="col-4">
+                                    <img src="{path-to-Sicon}" class="img-fluid" alt="" />
+                                    <p>Clarity</p>
+                                </div>
+                                <div class="col-4">
+                                    <img src="{path-to-Bicon}" class="img-fluid" alt="" />
+                                    <p>Growth oriented</p>
+                                </div>
+                                <div class="col-4">
+                                    <img src="{path-to-Cicon}" class="img-fluid" alt="" />
+                                    <p>Visionary</p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <img class='img-fluid' src="{% static 'images/frt-img.png' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <h5 class="text-center" style="color: rgb(105, 65, 198); font-weight: 600; font-size: 18px;">Our Services</h5>
+            <section class=" container_fluid d-flex justify-content-center align-items-center">
+                
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{https://www.linkpicture.com/q/1st_3.png}" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Financial Inclusion</h4>
+                                    <p class="card-text">Individuals in areas with limited access to traditional banking services can
+                                        use </p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.linkpicture.com/q/Frame-391.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Immutable Ledger</h4>
+                                    <p class="card-text">Transactions are recorded in a transparent and tamper-proof manner.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.linkpicture.com/q/Frame-391-1.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Marketing</h4>
+                                    <p class="card-text">Allows for more targeted marketing campaigns and personalized messaging based
+                                        on users.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        <!-- video posts section start-->
+        <section class="container_fluid">
+            <div class="Cheading">
+                <h5 style="color: #6941C6; font-weight: 600; font-size: 18px; margin-top: 30px;">Explore Programs </h5>
+                <h1 class="ClassT" style="color: #101828;">Our Most Popular Class</h1>
+                <p class="smt">Join our famous class; the knowledge provided will definitely be useful for you.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/NLvaOL6Cm48" frameborder="0" allowfullscreen></iframe>
+                        <img src="thumbnail_url" alt="Video Thumbnail" class="img-fluid" />
+                        <h3>Video Title</h3>
+                        <p>Description goes here.</p>
+                    </a>
+                </div>
+                <!-- Repeat the above structure for each YtClass item -->
+            </div>
+        </section>
+        <!-- video posts section end-->
+        <h5 ></h5>
+        <a style="text-align: center; color: rgb(105, 65, 198); font-weight: 600; font-size: 18px;" href="#" class="d-flex justify-content-center align-items-center" data-toggle="collapse" data-target="#exploremore">Explore More</a>
+        <div id="exploremore" class="collapse">
+            <section class="container-fluid d-flex justify-content-center align-items-center">
+            
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img src="https://www.linkpicture.com/q/pic7_1.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Contracts</h5>
+                                <p class="card-text">Automate contractual agreements and ensure trust in transactions.</p>
+                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#smartContracts">Learn More</a>
+                            </div>
+                            <div id="smartContracts" class="collapse">
+                                <!-- Content related to Smart Contracts goes here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="https://www.linkpicture.com/q/pic7_1.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Contracts</h5>
+                                <p class="card-text">Automate contractual agreements and ensure trust in transactions.</p>
+                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#smartContracts">Learn More</a>
+                            </div>
+                            <div id="smartContracts" class="collapse">
+                                <!-- Content related to Smart Contracts goes here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="https://www.linkpicture.com/q/pic8.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Decentralized Finance (DeFi)</h5>
+                                <p class="card-text">Explore the innovative world of decentralized finance and its benefits.</p>
+                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#decentralizedFinance">Learn More</a>
+                            </div>
+                            <div id="decentralizedFinance" class="collapse">
+                                <!-- Content related to Decentralized Finance goes here -->
+                                <p> In the depths of the ocean, Sharky, the tooth-brushing shark superhero, patrolled the seas with a mission to promote dental hygiene among marine life.
+                                    Armed with a magical toothbrush that gleamed with underwater sparkle, Sharky swam tirelessly, offering his dental expertise to fish, turtles, and even the elusive seahorses.
+                                    His reputation as the guardian of clean teeth spread far and wide, earning him the admiration of ocean dwellers who eagerly awaited his visits.
+                                    With a flip of his powerful tail, Sharky would gracefully approach sea creatures, demonstrating the proper technique of brushing their teeth to ensure a sparkling smile and a healthy mouth.
+                                    Under the waves, Sharky's commitment to dental wellness turned him into a legendary figure, reminding everyone that even toothy predators could be champions of oral care in the vast, watery world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
+            <!-- posts section starts  -->
+
+            <section class="container_fluid" id="posts">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% for Post in posts reversed %}
+                            <div class="card mb-3">
+                                <a style="text-decoration: none; color: black;" href="/Post/{{ Post.id }}">
+                                    <img src="{{ Post.image }}" alt="images" class="card-img-top">
+                                    <div class="card-body">
+                                        <h1 class="card-title" style="font-size: x-large; font-weight: bold;">{{ Post.title | safe}}</h1>
+                                        <h3 class="card-subtitle mb-2 text-muted" style="font-size: small;">{{ Post.created_at | safe}}</h3>
+                                        <p class="card-text" style="font-size: large;">{{ Post.body | truncatewords:20 | safe}}</p>
+                                    </div>
+                                    <div><h4>Make contents about crypto with eshacrypto team </h4></div>
+                                </a>
+                                <div class="card-footer">
+                                    <a href="#" class="card-link"><i class="far fa-comment"></i> ()</a>
+                                    <a href="#" class="card-link"><i class="far fa-share-square"></i> ()</a>
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
-                </div>
-        
-            </div>
-        
-            <div class="sidebar">
-        
-                <div class="box">
-                    <h3 class="title">about me</h3>
-                    <div class="about">
-                        <img src="{% static 'images/user.jpg' %}" alt="">
-                        <h3>jac</h3>
-                        <p>Experienced software developer with a passion for developing innovative and user-friendly software solutions.</p>
-                        <div class="follow">
-                            <a href="https://www.facebook.com/jackson.ndege.374/" target="_blank" class="fab fa-facebook-f"></a>
-                            <a href="https://twitter.com/Ndegejack12" target="_blank" class="fab fa-twitter"></a>
-                            <a href="https://instagram.com/ndege376?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank" class="fab fa-instagram"></a>
-                            <a href="https://www.linkedin.com/in/jackson-ndege-70b15a21b/" target="_blank" class="fab fa-linkedin"></a>
-                        </div>                        
-                    </div>
-                </div>
-                <div class="box">
-                    <h3 class="title">categories</h3>
-                    <div class="category">
-                        <a href="#"> travel <span>42</span></a>
-                        <a href="#"> photography <span>75</span> </a>
-                        <a href="#"> technology <span>22</span> </a>
-                        <a href="#"> fashion <span>17</span> </a>
-                        <a href="#"> study <span>48</span> </a>
-                        <a href="#"> science <span>39</span> </a>
-                        <a href="#"> music <span>59</span> </a>
-                        <a href="#"> public <span>12</span> </a>
-                        <a href="#"> business <span>32</span> </a>
-                        <a href="#"> sports <span>18</span> </a>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <h3 class="title">popular posts</h3>
-                    <div class="p-post">
-                        <div class="post">
-                            {% for Post in posts reversed%}
+            
+                    <div class="col-md-4" id="AboutUs">
+                        <div class="box text-center">
+                            <h3 class="title">about us</h3>
+                            <div class="about">
+                                <img src="{% static 'images/user.jpg' %}" alt="" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+                                <h3>eshacrypto</h3>
+                                <p>Experienced software developer with a passion for developing innovative and user-friendly software solutions.</p>
+                                <div class="follow">
+                                    <a href="https://www.facebook.com/jackson.ndege.374/" target="_blank" class="fab fa-facebook-f" style="font-size: 24px; margin-right: 20px;"></a>
+                                    <a href="https://twitter.com/Ndegejack12" target="_blank" class="fab fa-twitter" style="font-size: 24px; margin-right: 20px;"></a>
+                                    <a href="https://instagram.com/ndege376?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank" class="fab fa-instagram" style="font-size: 24px; margin-right: 20px;"></a>
+                                    <a href="https://www.linkedin.com/in/jackson-ndege-70b15a21b/" target="_blank" class="fab fa-linkedin" style="font-size: 24px; margin-right: 20px;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="box">
+                            <h3 class="title">Categories</h3>
                             <div class="row">
-                                    <div class="card">
-                                        <a style="text-decoration: none; color: black;" href="/Post/{{Post.id}}">
-                                            <h1 >{{Post.title}}</h1>
-                                            <h3 >{{Post.created_at}}</h3>
-                                        </a>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card" style="background-color: #9269ea; color: #fff;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">business</h5>
+                                            <p class="card-text">Posts: <span>42</span></p>
+                                        </div>
                                     </div>
                                 </div>
+                        
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card" style="background-color: #7e4df0; color: #fff;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">sports</h5>
+                                            <p class="card-text">Posts: <span>75</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card" style="background-color: #7545e6; color: #fff;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">technology</h5>
+                                            <p class="card-text">Posts: <span>75</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Repeat the above structure for each category -->
+                                
+                            </div>
+                        </div>
+            
+                        <div class="box">
+                            <h3 class="title">popular posts</h3>
+                            <div class="p-post">
+                                {% for Post in posts reversed %}
+                                    <div class="card mb-2">
+                                        <a style="text-decoration: none; color: black;" href="/Post/{{ Post.id }}">
+                                            <div class="card-body">
+                                                <h1 class="card-title">{{ Post.title | safe}}</h1>
+                                                <h3 class="card-subtitle mb-2 text-muted">{{ Post.created_at }}</h3>
+                                            </div>
+                                        </a>
+                                    </div>
                                 {% endfor %}
                             </div>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="box">
-                    <h3 class="title">popular tags</h3>
-                    <div class="tags">
-                        <a href="#">travel</a>
-                        <a href="#">photo</a>
-                        <a href="#">science</a>
-                        <a href="#">biology</a>
-                        <a href="#">aliens</a>
-                        <a href="#">nature</a>
-                        <a href="#">mountain</a>
-                        <a href="#">river</a>
-                        <a href="#">camp</a>
-                        <a href="#">landscape</a>
-                        <a href="#">world</a>
-                    </div>
-                </div>
-        
-            </div>
-        
-        </section>
-        
-        <!-- posts section ends -->
-        
-        <!-- contact section starts  -->
-        
-        <section class="contact" id="contact">
-        
-            <form action="">
-                <h3>contact me</h3>
-                <div class="inputBox">
-                    <input type="text" placeholder="name">
-                    <input type="email" placeholder="email">
-                </div>
-                <div class="inputBox">
-                    <input type="number" placeholder="number">
-                    <input type="text" placeholder="subject">
-                </div>
-                <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="send message" class="btn">
-            </form>
-        
-        </section>
-        
-        <!-- contact section ends -->
-        
-        <!-- footer section starts  -->
-        
-        <section class="footer">
-        
-            <div class="follow">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        
-            <div class="credit">created by <span>mr. jac</span> | all rights reserved</div>
-        
-        </section>
-        
-        <!-- footer section ends -->
-        
-        <!-- custom js file link  -->
-        <script src="{% static 'js/script.js' %}"></script>
+            </section>
             
-        </body>
-        </html>
+            <!-- posts section ends -->
 
-        <!-- Add more blog posts here -->
+            <!-- contact section starts  -->
 
-    </main>
+            <section class="contact" id="contact">
 
-    <footer>
-        <p>&copy; 2023 Jac's Blog. All rights reserved.</p>
-    </footer>
+                <form action="">
+                    <h3>contact us</h3>
+                    <div class="inputBox">
+                        <input type="text" placeholder="name">
+                        <input type="email" placeholder="email">
+                    </div>
+                    <div class="inputBox">
+                        <input type="number" placeholder="number">
+                        <input type="text" placeholder="subject">
+                    </div>
+                    <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" value="send message" class="btn">
+                </form>
+
+            </section>
+
+            <!-- contact section ends -->
+
+            <!-- footer section starts  -->
+
+            <section class="footer">
+
+                <div class="follow">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+
+                <div class="credit">created by <span>mr. jac</span> | all rights reserved</div>
+
+            </section>
+
+            <!-- footer section ends -->
+
+            <!-- custom js file link  -->
+            <script src="{% static 'js/script.js' %}"></script>
+
+</html>
+
+<!-- Add more blog posts here -->
+
+</main>
+
+
+<footer class="Footer">
+    <div class="container_fluid">
+        <div class="row rew">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 gap">
+                <img class="common" src="/static/media/eshacylogo.d96b8f451f0375c91f66.PNG" alt="" style="height: 50px;">
+                <p class="common" style="padding-left: 100px; color: rgb(11, 9, 9);">Experiences that create more talent in the world.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                <div class="row rew">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                        <h5 class="common fHead">Services</h5>
+                        <p class="common">Overview</p>
+                        <p class="common">Features</p>
+                        <p class="common">Solutions</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                        <h5 class="common fHead">Company</h5>
+                        <p class="common">About Us</p>
+                        <p class="common">Policy</p>
+                        <p class="common">NEWS</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                        <h5 class="common fHead">Social</h5>
+                        <p class="common">Twitter</p>
+                        <p class="common">Instagram</p>
+                        <p class="common">Youtube</p>
+                        <p class="common">Linkedin</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                        <h5 class="common fHead">Legal</h5>
+                        <p class="common">Terms</p>
+                        <p class="common">Privacy</p>
+                        <p class="common">Cookies</p>
+                        <p class="common">Contact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="CopyR">
+        <p class="common" style="text-align: center; margin-top: 10px;">© 2023 eshacrypto All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
+
 </html>

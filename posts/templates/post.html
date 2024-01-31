@@ -1,26 +1,39 @@
-
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    {% load static %}
+    <title>eshacrypto</title>
+    <!-- {% load static %} -->
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <!-- font awesome cdn link  -->
-<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
+    <link rel="stylesheet"
+        href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
     <!-- custom css file link  -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
 </head>
+
 <body>
     <header class="header">
         
-        <a href="index.html" class="logo"><span>J</span>ac</a>
+        <a href="index.html" class="logo"><span>e</span>shacrypto</a>
     
         <nav class="navbar">
-            <a href="index.html">banner</a>
-            <a href="index.html #posts">my posts</a>
-            <a href="index.html #contact">contact me</a>
+            <a href="#banner">Home</a>   
+            <a href="#AboutUs">About us</a>                                                 
+            <a href="#posts">new posts</a>  
+            <a href="#contact">contact us</a>
         </nav>
     
         <div class="icons">
@@ -45,22 +58,16 @@
                             <div class="card">
                                 
                                     <img src="{{posts.image.url}}" alt="images" class="image">
-                                    <h1 style="font-size: x-large; font: bold;">{{posts.title}}</h1>
+                                    <h1 style="font-size: x-large; font: bold;">{{posts.title | safe}}</h1>
                                     <h3 style="font-size: small;">{{posts.created_at}}</h3>
-                                    <p style="font-size: large;">{{posts.body}}</p>
+                                    <p style="font-size: 24px;">{{posts.body | safe}}</p>
                             </div>
-                            <a href="#" class="user">
-                                <i class="far fa-user"></i>
-                                <span>by admin</span>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="far fa-comment"></i>
-                                <span>(45)</span>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="far fa-share-square"></i>
-                                <span>(29)</span>
-                            </a>
+                            <div><h4>Make contents about crypto with eshacrypto team </h4></div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link"><i class="far fa-user"></i><span>by eshacrypto</span></a>
+                                <a href="#" class="card-link"><i class="far fa-comment"></i> ()</a>
+                                <a href="#" class="card-link"><i class="far fa-share-square"></i> ()</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,10 +77,10 @@
             <div class="sidebar">
         
                 <div class="box">
-                    <h3 class="title">about me</h3>
+                    <h3 class="title">about us</h3>
                     <div class="about">
                         <img src="{% static 'images/user.jpg' %}" alt="">
-                        <h3>jac</h3>
+                        <h3>eshacrypto</h3>
                         <p>Experienced software developer with a passion for developing innovative and user-friendly software solutions.</p>
                         <div  class="follow">
                             <a href="https://www.facebook.com/jackson.ndege.374/" target="_blank" class="fab fa-facebook-f"></a>
@@ -100,35 +107,69 @@
                     </div>
                 </div>
         
-
-        
-                <div class="box">
-                    <h3 class="title">popular tags</h3>
-                    <div class="tags">
-                        <a href="#">travel</a>
-                        <a href="#">photo</a>
-                        <a href="#">science</a>
-                        <a href="#">biology</a>
-                        <a href="#">aliens</a>
-                        <a href="#">nature</a>
-                        <a href="#">mountain</a>
-                        <a href="#">river</a>
-                        <a href="#">camp</a>
-                        <a href="#">landscape</a>
-                        <a href="#">world</a>
-                    </div>
-                </div>
-        
             </div>
         
         </section>
 
         <!-- Add more blog posts here -->
 
-    </main>
 
-    <footer>
-        <p>&copy; 2023 Jac's Blog. All rights reserved.</p>
+        <section class="footer">
+
+            <div class="follow">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+
+            <div class="credit">created by <span>mr. jac</span> | all rights reserved</div>
+
+        </section>
+
+    </main>
+    <footer class="Footer">
+        <div class="container_fluid">
+            <div class="row rew">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 gap">
+                    <img class="common" src="/static/media/eshacylogo.d96b8f451f0375c91f66.PNG" alt="" style="height: 50px;">
+                    <p class="common" style="padding-left: 100px; color: rgb(11, 9, 9);">Experiences that create more talent in the world.</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <div class="row rew">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                            <h5 class="common fHead">Services</h5>
+                            <p class="common">Overview</p>
+                            <p class="common">Features</p>
+                            <p class="common">Solutions</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                            <h5 class="common fHead">Company</h5>
+                            <p class="common">About Us</p>
+                            <p class="common">Policy</p>
+                            <p class="common">NEWS</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                            <h5 class="common fHead">Social</h5>
+                            <p class="common">Twitter</p>
+                            <p class="common">Instagram</p>
+                            <p class="common">Youtube</p>
+                            <p class="common">Linkedin</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
+                            <h5 class="common fHead">Legal</h5>
+                            <p class="common">Terms</p>
+                            <p class="common">Privacy</p>
+                            <p class="common">Cookies</p>
+                            <p class="common">Contact</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="CopyR">
+            <p class="common" style="text-align: center; margin-top: 10px;">© 2023 eshacrypto All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
