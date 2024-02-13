@@ -74,70 +74,143 @@
                 <div>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                            <h1 style="font-size: 60px; margin-top: 38px;" class="CoverUp title">Top up your <span style="color: #7F56D9">skills</span> <br /> of <span
-                                    style="color: #7F56D9">Trading</span> and become a<br /> <span
-                                    style="color: #7F56D9">Good Trader</span> in both digital currencies and Financial Trading</h1>
+                            <h1 style="font-size: 50px; font-family: fantasy; margin-top: 38px;" class="CoverUp title"><strong> Top up your <span style="color: #7F56D9">skills</span> <br /> of <span
+                                style="color: #7F56D9">Trading</span> and become a<br /> <span
+                                style="color: #7F56D9">Good Trader</span> in both digital currencies and Financial Tranding</strong> </h1>
                             <p style="font-size: medium;" class="smt">Provides you with the latest cryptocurrency material that helps your
                                 knowledge grow.</p>
                             <div class="upBtn">
                                 <a href="/dashboard" class="btn btn-primary"> Get started</a>
                                 <a href="#" class="btn btn-secondary">See Videos</a>
                             </div>
-                            <div style="font-size: small;" class="row">
+                            <div style="font-size: small; margin-top: 20px;" class="row">
                                 <div class="col-4">
-                                    <img src="{path-to-Sicon}" class="img-fluid" alt="" />
+                                    <img src="{% static 'images/Icon/Speak.png' %}" class="img-fluid" alt="" />
                                     <p>Clarity</p>
                                 </div>
                                 <div class="col-4">
-                                    <img src="{path-to-Bicon}" class="img-fluid" alt="" />
+                                    <img src="{% static 'images/Icon/Vector.png' %}" class="img-fluid" alt="" />
                                     <p>Growth oriented</p>
                                 </div>
                                 <div class="col-4">
-                                    <img src="{path-to-Cicon}" class="img-fluid" alt="" />
+                                    <img src="{% static 'images/Icon/Layer 2.png' %}" class="img-fluid" alt="" />
                                     <p>Visionary</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center align-items-center">
                             <img class='img-fluid' src="{% static 'images/frt-img.png' %}" alt="" />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <h5 class="text-center" style="color: rgb(105, 65, 198); font-weight: 600; font-size: 18px;">Our Services</h5>
+            <!-- <h5 class="text-center" style="color: rgb(105, 65, 198); font-weight: 600; font-size: 18px;">Our Services</h5> -->
+            <a style="text-align: center; color: rgb(105, 65, 198); font-weight: 600; font-size: 18px;" href="#" class="d-flex justify-content-center align-items-center" data-toggle="collapse" data-target="#tranding_merket">MARKET STRUCTURE</a>
+            <div style="font-size: large; padding-left: 20px;" class="collapse" id="tranding_merket">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <p>The most important thing you need as a good trader it's the ability to read the market structure, <br> which it's the skill that will allow you to use the price action in the market condition. <br>
+                            You can not trade all the market in the same way, the important skill you need is to understand the behavior of the market, which show how the market moves.</p>
+                        
+                            <p>Three markets you need to experience;<br>
+                            1.Trending markets <br>
+                            2.Ranging markets and <br>
+                            3.Choppy markets <br></p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'images/marketstructure.jpg' %}" width="100%" height="350px" alt="picture of marketing structure">
+                    </div>
+                </div>
+            </div>
             <section class=" container_fluid d-flex justify-content-center align-items-center">
                 
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="{https://www.linkpicture.com/q/1st_3.png}" class="card-img-top" alt="">
+                                <img src="{% static 'images/uptrand.jpg' %}" class="card-img-top" height="150px" alt="">
                                 <div class="card-body">
-                                    <h4 class="card-title">Financial Inclusion</h4>
-                                    <p class="card-text">Individuals in areas with limited access to traditional banking services can
-                                        use </p>
-                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <h4 class="card-title">Trending market:</h4>
+                                    <p class="card-text">
+                                        The trending markets it is characterized by repeating pattern 
+                                    </p>
+
+                                        <div id="Financial" class="collapse">
+                                            <!-- Content related to Smart Contracts goes here -->
+                                            <p>
+                                                higher high and Higher low which is an up trending market, and
+                                                Lower high and lower low which it's said to downtrend market. 
+                                                No need to complicate whether the market it's bullish or bearish only you can observe the price action is 
+                                                enough to show the trending of the market.
+                                            </p>
+                                            <p>
+                                                UP TRENDING <br>
+                                                If you can understand how to identify the trending of the market it will be easy for you to trade, 
+                                                if it's the bullish trending then you will look for buying opportunity because you should trade the trend, 
+                                                you need to know when the corrective moves ends, and when the impulsive move begins,this we should use support 
+                                                and resistance,
+                                                <img src="{% static 'images/uptranding.jpg' %}" width="100%" height="350px" alt="uptrend image goes here">
+                                            </p>
+                                            <p>DOWN TRENDING <br>
+                                                It's characterized by repeating patterns lower high and lower low
+                                                Let see an example of up trending market, <img src= "{% static 'images/downtrend.jpg' %}" width="100%" height="350px" alt="downtrend image goes here">
+                                                Trending market it's easy you don't need to complicate you analysis, use your brain to understand what the market doing. 
+                                                
+                                                In order to identify the trending of the market you suppose to use bigger timeframe like 4hrs, daily chart, weekly chart, these
+                                                also will help to get strong support and resistance,but don't use smaller timeframes. 
+                                                Mostly of the opportunity in the down trend is the selling.. 
+                                                
+                                                Professional traders understand how trending markets move; they always buy at the beginning of an impulsive move and take profits at the end of it.
+                                            </p>
+                                        </div>
+                                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#Financial">Learn More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="https://www.linkpicture.com/q/Frame-391.png" class="card-img-top" alt="">
+                                <img src="{% static 'images/rangingmarkert.jpg' %}" class="card-img-top" height="150px" alt="">
                                 <div class="card-body">
-                                    <h4 class="card-title">Immutable Ledger</h4>
-                                    <p class="card-text">Transactions are recorded in a transparent and tamper-proof manner.</p>
-                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <h4 class="card-title">Ranging market</h4>
+                                    <p class="card-text">If you look at any forex pair, or any time frame, you will </p>
+                                    <div id="Immutable" class="collapse">
+                                        <!-- Content related to Smart Contracts goes here -->
+                                        <p> 
+                                            see that when price moves 
+                                            strongly in one direction, it makes strong impulsive moves, followed by smaller 
+                                            corrective moves that are pointing against the direction of where the pair is clearly going. 
+                                            This type of movement generates higher highs and higher lows in case of an uptrend 
+                                            and lower highs and lower lows in a case of a downtrend. A ranging market is one 
+                                            that it is not behaving like this. A sideway market is characterized by the fact that 
+                                            price is not making new highs and lows any more. instead it begins to make swing lows horizontally.see the chart below;
+                                            <img src= "{% static 'images/ranging.jpg' %}" width="100%" height="350px" alt="ranging market imagesgoes here">
+                                        </p>
+                                    </div>
+                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#Immutable">Learn More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="https://www.linkpicture.com/q/Frame-391-1.png" class="card-img-top" alt="">
+                                <img src="{% static 'images/choppy.jpg' %}" class="card-img-top" height="150px" alt="">
                                 <div class="card-body">
-                                    <h4 class="card-title">Marketing</h4>
-                                    <p class="card-text">Allows for more targeted marketing campaigns and personalized messaging based
-                                        on users.</p>
-                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <h4 class="card-title">Choppy market</h4>
+                                    <p class="card-text">Choppy or consolidation markets are those which have no </p>
+
+                                        <div id="Marketing" class="collapse">
+                                            <!-- Content related to Smart Contracts goes here -->
+                                            <p> 
+                                                clear directions, when you open your chart, and you find a lot of noise, you can’t even  
+                                                decide if the market is ranging, or trending.  
+                                                You have to know that you are watching a choppy market. This type of  
+                                                markets can make you feel very emotional and doubt your trading  
+                                                strategies as it starts to drop in performance. 
+                                                The best way to determine if a market is choppy is just by zooming out  
+                                                on the daily chart and taking in the bigger picture 
+                                                <!-- <img src="" alt="choppy images goes here"> -->
+                                            </p>
+                                        </div>
+                                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#Marketing">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -171,46 +244,59 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <img src="https://www.linkpicture.com/q/pic7_1.png" class="card-img-top" alt="">
+                            <img src="{% static 'images/' %}" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Smart Contracts</h5>
                                 <p class="card-text">Automate contractual agreements and ensure trust in transactions.</p>
+                                    <div id="smartContracts" class="collapse">
+                                    <!-- Content related to Smart Contracts goes here -->
+                                    <p> In the depths of the ocean, Sharky, the tooth-brushing shark superhero, patrolled the seas with a mission to promote dental hygiene among marine life.
+                                        Armed with a magical toothbrush that gleamed with underwater sparkle, Sharky swam tirelessly, offering his dental expertise to fish, turtles, and even the elusive seahorses.
+                                        His reputation as the guardian of clean teeth spread far and wide, earning him the admiration of ocean dwellers who eagerly awaited his visits.
+                                        With a flip of his powerful tail, Sharky would gracefully approach sea creatures, demonstrating the proper technique of brushing their teeth to ensure a sparkling smile and a healthy mouth.
+                                        Under the waves, Sharky's commitment to dental wellness turned him into a legendary figure, reminding everyone that even toothy predators could be champions of oral care in the vast, watery world.</p>
+                                </div>
                                 <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#smartContracts">Learn More</a>
                             </div>
-                            <div id="smartContracts" class="collapse">
-                                <!-- Content related to Smart Contracts goes here -->
-                            </div>
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="https://www.linkpicture.com/q/pic7_1.png" class="card-img-top" alt="">
+                            <img src="{% static 'images/' %}" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">Smart Contracts</h5>
+                                <h5 class="card-title">Distributed </h5>
                                 <p class="card-text">Automate contractual agreements and ensure trust in transactions.</p>
-                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#smartContracts">Learn More</a>
+                                <div id="Distributed" class="collapse">
+                                    <!-- Content related to Smart Contracts goes here -->
+                                    <p> In the depths of the ocean, Sharky, the tooth-brushing shark superhero, patrolled the seas with a mission to promote dental hygiene among marine life.
+                                        Armed with a magical toothbrush that gleamed with underwater sparkle, Sharky swam tirelessly, offering his dental expertise to fish, turtles, and even the elusive seahorses.
+                                        His reputation as the guardian of clean teeth spread far and wide, earning him the admiration of ocean dwellers who eagerly awaited his visits.
+                                        With a flip of his powerful tail, Sharky would gracefully approach sea creatures, demonstrating the proper technique of brushing their teeth to ensure a sparkling smile and a healthy mouth.
+                                        Under the waves, Sharky's commitment to dental wellness turned him into a legendary figure, reminding everyone that even toothy predators could be champions of oral care in the vast, watery world.</p>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#Distributed">Learn More</a>
                             </div>
-                            <div id="smartContracts" class="collapse">
-                                <!-- Content related to Smart Contracts goes here -->
-                            </div>
+            
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="https://www.linkpicture.com/q/pic8.png" class="card-img-top" alt="">
+                            <img src="{% static 'images/' %}" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Decentralized Finance (DeFi)</h5>
                                 <p class="card-text">Explore the innovative world of decentralized finance and its benefits.</p>
+                                <div id="decentralizedFinance" class="collapse">
+                                    <!-- Content related to Decentralized Finance goes here -->
+                                    <p> In the depths of the ocean, Sharky, the tooth-brushing shark superhero, patrolled the seas with a mission to promote dental hygiene among marine life.
+                                        Armed with a magical toothbrush that gleamed with underwater sparkle, Sharky swam tirelessly, offering his dental expertise to fish, turtles, and even the elusive seahorses.
+                                        His reputation as the guardian of clean teeth spread far and wide, earning him the admiration of ocean dwellers who eagerly awaited his visits.
+                                        With a flip of his powerful tail, Sharky would gracefully approach sea creatures, demonstrating the proper technique of brushing their teeth to ensure a sparkling smile and a healthy mouth.
+                                        Under the waves, Sharky's commitment to dental wellness turned him into a legendary figure, reminding everyone that even toothy predators could be champions of oral care in the vast, watery world.</p>
+                                </div>
                                 <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#decentralizedFinance">Learn More</a>
                             </div>
-                            <div id="decentralizedFinance" class="collapse">
-                                <!-- Content related to Decentralized Finance goes here -->
-                                <p> In the depths of the ocean, Sharky, the tooth-brushing shark superhero, patrolled the seas with a mission to promote dental hygiene among marine life.
-                                    Armed with a magical toothbrush that gleamed with underwater sparkle, Sharky swam tirelessly, offering his dental expertise to fish, turtles, and even the elusive seahorses.
-                                    His reputation as the guardian of clean teeth spread far and wide, earning him the admiration of ocean dwellers who eagerly awaited his visits.
-                                    With a flip of his powerful tail, Sharky would gracefully approach sea creatures, demonstrating the proper technique of brushing their teeth to ensure a sparkling smile and a healthy mouth.
-                                    Under the waves, Sharky's commitment to dental wellness turned him into a legendary figure, reminding everyone that even toothy predators could be champions of oral care in the vast, watery world.</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -368,10 +454,10 @@
     <div class="container_fluid">
         <div class="row rew">
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 gap">
-                <img class="common" src="/static/media/eshacylogo.d96b8f451f0375c91f66.PNG" alt="" style="height: 50px;">
+                <img class="common" src="{% static '/images/eshacylogo.PNG' %}" alt="" style="padding-left: 100px; height: 50px;">
                 <p class="common" style="padding-left: 100px; color: rgb(11, 9, 9);">Experiences that create more talent in the world.</p>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div style="padding-left: 90px;" class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                 <div class="row rew">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 gap">
                         <h5 class="common fHead">Services</h5>
